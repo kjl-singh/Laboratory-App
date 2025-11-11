@@ -10,6 +10,7 @@
   "patient",
   "age",
   "test_group",
+  "sample_type",
   "column_break_jmdi",
   "date",
   "prescribing_doctor",
@@ -100,13 +101,19 @@
    "fieldtype": "Link",
    "label": "Company",
    "options": "Company"
+  },
+  {
+   "fieldname": "sample_type",
+   "fieldtype": "Link",
+   "label": "Sample Type",
+   "options": "Sample Type"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-11-11 17:44:06.356886",
+ "modified": "2025-11-11 18:54:56.557579",
  "modified_by": "Administrator",
  "module": "Laboratory",
  "name": "Lab Request",
