@@ -1,0 +1,127 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-11-11 13:20:11.132596",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "name1",
+  "service",
+  "price",
+  "sample_type",
+  "column_break_xxqn",
+  "code",
+  "turnaround_time",
+  "result_type",
+  "diagnosis_section",
+  "parameter",
+  "consumed_material_section",
+  "productservice",
+  "other_information_section",
+  "company"
+ ],
+ "fields": [
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "fieldname": "service",
+   "fieldtype": "Link",
+   "label": "Service",
+   "options": "Service"
+  },
+  {
+   "fieldname": "price",
+   "fieldtype": "Data",
+   "label": "Price"
+  },
+  {
+   "fieldname": "code",
+   "fieldtype": "Data",
+   "label": "Code"
+  },
+  {
+   "fieldname": "turnaround_time",
+   "fieldtype": "Datetime",
+   "label": "Turnaround Time"
+  },
+  {
+   "fieldname": "result_type",
+   "fieldtype": "Select",
+   "label": "Result Type",
+   "options": "Quantitative\nQualitative"
+  },
+  {
+   "fieldname": "sample_type",
+   "fieldtype": "Link",
+   "label": "Sample Type",
+   "options": "Laboratory Sample Type"
+  },
+  {
+   "fieldname": "column_break_xxqn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "diagnosis_section",
+   "fieldtype": "Section Break",
+   "label": "Diagnosis"
+  },
+  {
+   "fieldname": "parameter",
+   "fieldtype": "Table",
+   "label": "Parameter",
+   "options": "Diagnosis"
+  },
+  {
+   "fieldname": "consumed_material_section",
+   "fieldtype": "Section Break",
+   "label": "Consumed Material"
+  },
+  {
+   "fieldname": "productservice",
+   "fieldtype": "Table",
+   "label": "Product/Service",
+   "options": "Consumed Material"
+  },
+  {
+   "fieldname": "other_information_section",
+   "fieldtype": "Section Break",
+   "label": "Other Information"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-11-11 15:48:46.320497",
+ "modified_by": "Administrator",
+ "module": "Laboratory",
+ "name": "Lab Test",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

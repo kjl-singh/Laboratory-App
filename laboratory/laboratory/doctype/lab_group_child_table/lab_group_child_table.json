@@ -1,0 +1,56 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-11-11 14:49:29.669604",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "test",
+  "turnaround_time",
+  "sale_price",
+  "special_instruction"
+ ],
+ "fields": [
+  {
+   "fieldname": "test",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Test",
+   "options": "Lab Test"
+  },
+  {
+   "fieldname": "turnaround_time",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Turnaround Time"
+  },
+  {
+   "fieldname": "sale_price",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Sale Price"
+  },
+  {
+   "fieldname": "special_instruction",
+   "fieldtype": "Text",
+   "in_list_view": 1,
+   "label": "Special Instruction"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-11-11 14:52:37.224975",
+ "modified_by": "Administrator",
+ "module": "Laboratory",
+ "name": "Lab group child table",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

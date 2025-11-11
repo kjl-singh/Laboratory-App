@@ -1,0 +1,134 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-11-11 15:02:38.386850",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_ogrn",
+  "amended_from",
+  "patient",
+  "age",
+  "test_group",
+  "column_break_jmdi",
+  "date",
+  "prescribing_doctor",
+  "collection_type",
+  "schedule_date",
+  "lines_section",
+  "lines",
+  "other_information_section",
+  "company"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_ogrn",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Lab Request",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "patient",
+   "fieldtype": "Link",
+   "label": "Patient",
+   "options": "Customer"
+  },
+  {
+   "fetch_from": "patient.custom_age",
+   "fieldname": "age",
+   "fieldtype": "Data",
+   "label": "Age"
+  },
+  {
+   "fieldname": "test_group",
+   "fieldtype": "Link",
+   "label": "Test Group",
+   "options": "Laboratory Group"
+  },
+  {
+   "fieldname": "column_break_jmdi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "prescribing_doctor",
+   "fieldtype": "Link",
+   "label": "Prescribing Doctor",
+   "options": "Physician"
+  },
+  {
+   "fieldname": "collection_type",
+   "fieldtype": "Select",
+   "label": "Collection Type",
+   "options": "Center Collection\nHome Collection"
+  },
+  {
+   "fieldname": "schedule_date",
+   "fieldtype": "Date",
+   "label": "Schedule Date"
+  },
+  {
+   "fieldname": "lines_section",
+   "fieldtype": "Section Break",
+   "label": "Lines"
+  },
+  {
+   "fieldname": "lines",
+   "fieldtype": "Table",
+   "label": "Lines",
+   "options": "Lab group child table"
+  },
+  {
+   "fieldname": "other_information_section",
+   "fieldtype": "Section Break",
+   "label": "Other Information"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-11-11 17:44:06.356886",
+ "modified_by": "Administrator",
+ "module": "Laboratory",
+ "name": "Lab Request",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
