@@ -1,80 +1,73 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "field:name1",
- "creation": "2025-11-11 13:20:11.132596",
+ "creation": "2025-11-13 18:01:05.459278",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "name1",
-  "service",
-  "price",
-  "sample_type",
-  "column_break_xxqn",
-  "code",
-  "turnaround_time",
-  "result_type",
-  "diagnosis_section",
-  "parameter",
+  "patient",
+  "test",
+  "prescribing_doctor",
+  "test_sample",
+  "pathology_doctor",
+  "request_date",
+  "test_date",
+  "section_break_tifv",
+  "data_wpdp",
   "consumed_material_section",
-  "productservice",
+  "table_bivn",
   "other_information_section",
   "company"
  ],
  "fields": [
   {
-   "fieldname": "name1",
-   "fieldtype": "Data",
-   "label": "Name",
-   "unique": 1
-  },
-  {
-   "fieldname": "service",
+   "fieldname": "patient",
    "fieldtype": "Link",
-   "label": "Service",
-   "options": "Service"
+   "label": "Patient",
+   "options": "Customer"
   },
   {
-   "fetch_from": "service.sales_price",
-   "fieldname": "price",
-   "fieldtype": "Data",
-   "label": "Price"
-  },
-  {
-   "fieldname": "code",
-   "fieldtype": "Data",
-   "label": "Code"
-  },
-  {
-   "fieldname": "turnaround_time",
-   "fieldtype": "Datetime",
-   "label": "Turnaround Time"
-  },
-  {
-   "fieldname": "result_type",
-   "fieldtype": "Select",
-   "label": "Result Type",
-   "options": "Quantitative\nQualitative"
-  },
-  {
-   "fieldname": "sample_type",
+   "fieldname": "test",
    "fieldtype": "Link",
-   "label": "Sample Type",
-   "options": "Sample Type"
+   "label": "Test",
+   "options": "Lab Test"
   },
   {
-   "fieldname": "column_break_xxqn",
-   "fieldtype": "Column Break"
+   "fieldname": "prescribing_doctor",
+   "fieldtype": "Link",
+   "label": "Prescribing Doctor",
+   "options": "Physician"
   },
   {
-   "fieldname": "diagnosis_section",
+   "fieldname": "test_sample",
+   "fieldtype": "Data",
+   "label": "Test Sample"
+  },
+  {
+   "fieldname": "pathology_doctor",
+   "fieldtype": "Link",
+   "label": "Pathology Doctor",
+   "options": "Physician"
+  },
+  {
+   "fieldname": "request_date",
+   "fieldtype": "Date",
+   "label": "Request Date"
+  },
+  {
+   "fieldname": "test_date",
+   "fieldtype": "Date",
+   "label": "Test Date"
+  },
+  {
+   "fieldname": "section_break_tifv",
    "fieldtype": "Section Break",
    "label": "Diagnosis"
   },
   {
-   "fieldname": "parameter",
+   "fieldname": "data_wpdp",
    "fieldtype": "Table",
-   "label": "Parameter",
+   "label": "Diagnosis",
    "options": "Diagnosis"
   },
   {
@@ -83,9 +76,8 @@
    "label": "Consumed Material"
   },
   {
-   "fieldname": "productservice",
+   "fieldname": "table_bivn",
    "fieldtype": "Table",
-   "label": "Product/Service",
    "options": "Consumed Material"
   },
   {
@@ -103,11 +95,10 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-11-13 16:03:07.526723",
+ "modified": "2025-11-13 18:13:26.730360",
  "modified_by": "Administrator",
  "module": "Laboratory",
- "name": "Lab Test",
- "naming_rule": "By fieldname",
+ "name": "Lab Test Result",
  "owner": "Administrator",
  "permissions": [
   {

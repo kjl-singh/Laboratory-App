@@ -9,8 +9,9 @@
   "amended_from",
   "patient",
   "age",
-  "test_group",
   "sample_type",
+  "test_group",
+  "lab_tests",
   "column_break_jmdi",
   "date",
   "prescribing_doctor",
@@ -61,7 +62,8 @@
   {
    "fieldname": "date",
    "fieldtype": "Date",
-   "label": "Date"
+   "label": "Date",
+   "read_only": 1
   },
   {
    "fieldname": "prescribing_doctor",
@@ -107,13 +109,19 @@
    "fieldtype": "Link",
    "label": "Sample Type",
    "options": "Sample Type"
+  },
+  {
+   "fieldname": "lab_tests",
+   "fieldtype": "Link",
+   "label": "Lab Tests",
+   "options": "Lab Test"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-11-11 18:54:56.557579",
+ "modified": "2025-11-13 18:45:57.869101",
  "modified_by": "Administrator",
  "module": "Laboratory",
  "name": "Lab Request",

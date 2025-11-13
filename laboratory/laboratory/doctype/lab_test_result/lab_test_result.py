@@ -5,5 +5,5 @@
 from frappe.model.document import Document
 
 
-class LaboratorySampleType(Document):
+class LabTestResult(Document):
 	pass
