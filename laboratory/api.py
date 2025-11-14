@@ -19,7 +19,7 @@ def create_invoice_from_lab_request(lab_request):
                 "income_account": "Sales - K"
             })
     else:
-        frappe.throw("No lab request lines found. Please add medicines before creating an invoice.")
+        frappe.throw("No lab request lines found. Please add lines before creating an invoice.")
 
     invoice.set_missing_values()
     invoice.calculate_taxes_and_totals()

@@ -1,7 +1,8 @@
 {
  "actions": [],
  "allow_rename": 1,
- "creation": "2025-11-11 13:30:29.625445",
+ "autoname": "field:parameter",
+ "creation": "2025-11-14 13:12:20.350466",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
@@ -9,7 +10,8 @@
   "parameter",
   "normal_range",
   "uom",
-  "result_value_type",
+  "result",
+  "result_type",
   "remark"
  ],
  "fields": [
@@ -18,7 +20,14 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Parameter",
-   "options": "Parameter"
+   "options": "Parameter",
+   "unique": 1
+  },
+  {
+   "fieldname": "normal_range",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Normal Range"
   },
   {
    "fieldname": "uom",
@@ -28,33 +37,34 @@
    "options": "UOM"
   },
   {
-   "fieldname": "result_value_type",
+   "fieldname": "result",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Result"
+  },
+  {
+   "fieldname": "result_type",
    "fieldtype": "Select",
    "in_list_view": 1,
-   "label": "Result Value Type",
-   "options": "Qualitative\nQuantitative"
+   "label": "Result Type",
+   "options": "Low\nMedium\nHigh"
   },
   {
    "fieldname": "remark",
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Remark"
-  },
-  {
-   "fieldname": "normal_range",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Normal Range"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2025-11-14 13:08:44.693874",
+ "modified": "2025-11-14 16:06:09.793574",
  "modified_by": "Administrator",
  "module": "Laboratory",
- "name": "Diagnosis",
+ "name": "Lab test parameter",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [],
  "row_format": "Dynamic",

@@ -1,6 +1,6 @@
 frappe.ui.form.on('Lab Request', {
     refresh(frm) { 
-        if (frm.doc.docstatus === 0) {
+        if (frm.doc.docstatus === 1) {
             frm.add_custom_button(__('Create Invoice'), function() {
                 frappe.call({
                     method: "laboratory.api.create_invoice_from_lab_request",

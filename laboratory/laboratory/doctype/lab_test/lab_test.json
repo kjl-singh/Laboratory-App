@@ -47,7 +47,7 @@
   },
   {
    "fieldname": "turnaround_time",
-   "fieldtype": "Datetime",
+   "fieldtype": "Time",
    "label": "Turnaround Time"
   },
   {
@@ -103,7 +103,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-11-13 16:03:07.526723",
+ "modified": "2025-11-14 15:47:10.154127",
  "modified_by": "Administrator",
  "module": "Laboratory",
  "name": "Lab Test",

@@ -11,12 +11,13 @@
   "age",
   "sample_type",
   "test_group",
-  "lab_tests",
   "column_break_jmdi",
   "date",
   "prescribing_doctor",
   "collection_type",
   "schedule_date",
+  "section_break_fveh",
+  "tests",
   "lines_section",
   "lines",
   "other_information_section",
@@ -111,17 +112,22 @@
    "options": "Sample Type"
   },
   {
-   "fieldname": "lab_tests",
-   "fieldtype": "Link",
-   "label": "Lab Tests",
-   "options": "Lab Test"
+   "fieldname": "section_break_fveh",
+   "fieldtype": "Section Break",
+   "label": "Tests"
+  },
+  {
+   "fieldname": "tests",
+   "fieldtype": "Table",
+   "label": "Tests",
+   "options": "Lab Request Test"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-11-13 18:45:57.869101",
+ "modified": "2025-11-14 11:43:04.562232",
  "modified_by": "Administrator",
  "module": "Laboratory",
  "name": "Lab Request",
