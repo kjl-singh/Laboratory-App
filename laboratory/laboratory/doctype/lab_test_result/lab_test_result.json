@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "format: LT-{####}",
  "creation": "2025-11-13 18:01:05.459278",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -124,10 +125,11 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-11-14 16:42:00.320662",
+ "modified": "2025-11-17 11:16:21.929597",
  "modified_by": "Administrator",
  "module": "Laboratory",
  "name": "Lab Test Result",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {

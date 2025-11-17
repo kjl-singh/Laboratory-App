@@ -10,7 +10,6 @@
   "patient",
   "age",
   "sample_type",
-  "test_group",
   "column_break_jmdi",
   "date",
   "prescribing_doctor",
@@ -49,12 +48,6 @@
    "fieldname": "age",
    "fieldtype": "Data",
    "label": "Age"
-  },
-  {
-   "fieldname": "test_group",
-   "fieldtype": "Link",
-   "label": "Test Group",
-   "options": "Laboratory Group"
   },
   {
    "fieldname": "column_break_jmdi",
@@ -127,7 +120,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-11-14 11:43:04.562232",
+ "modified": "2025-11-17 10:35:08.613868",
  "modified_by": "Administrator",
  "module": "Laboratory",
  "name": "Lab Request",

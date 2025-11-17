@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "field:parameter",
+ "autoname": "hash",
  "creation": "2025-11-11 13:48:43.012636",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -12,18 +12,17 @@
   {
    "fieldname": "parameter",
    "fieldtype": "Data",
-   "label": "Parameter",
-   "unique": 1
+   "label": "Parameter"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-11-13 17:34:44.741877",
+ "modified": "2025-11-17 10:02:09.295173",
  "modified_by": "Administrator",
  "module": "Laboratory",
  "name": "Parameter",
- "naming_rule": "By fieldname",
+ "naming_rule": "Random",
  "owner": "Administrator",
  "permissions": [
   {

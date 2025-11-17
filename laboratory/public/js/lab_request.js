@@ -1,33 +1,53 @@
 frappe.ui.form.on("Lab Request", {
-  test_group(frm) {
-    if (frm.doc.test_group) {
-      frm.clear_table("lines");
-      console.log("Selected Test Group:", frm.doc.test_group);
 
-      frappe.db.get_doc("Laboratory Group", frm.doc.test_group).then(doc => {
-        console.log("Fetched Laboratory Group doc:", doc);
+    tests_add(frm, cdt, cdn) {
+        update_lines_table(frm);
+    },
 
-        if (doc.lab_test_group && doc.lab_test_group.length > 0) {
-          let i = 1;
-          doc.lab_test_group.forEach(row => {
-            console.log("Adding row:", row);
+    tests_remove(frm) {
+        update_lines_table(frm);
+    },
 
-            let child = frm.add_child("lines");
-            child.no = i++;
-            child.test = row.test;
-            child.turnaround_time = row.turnaround_time;
-            child.sale_price = row.sale_price;
-            child.special_instruction = row.special_instruction;
-          });
-          frm.refresh_field("lines");
-        } else {
-          frappe.msgprint("No tests found in selected Laboratory Group.");
-          console.log("No lab_test_group found.");
-        }
-      });
-    } else {
-      frm.clear_table("lines");
-      frm.refresh_field("lines");
+    tests(frm) {
+        update_lines_table(frm);
     }
-  }
 });
+
+function update_lines_table(frm) {
+
+    if (!frm.doc.tests) return;
+
+    frm.clear_table("lines");
+
+    const selected = frm.doc.tests.filter(row => row.selected == 1 && row.lab_test);
+
+    if (selected.length === 0) {
+        frm.refresh_field("lines");
+        return;
+    }
+
+    selected.forEach(row => {
+
+        frappe.call({
+            method: "frappe.client.get",
+            args: {
+                doctype: "Lab Test",
+                name: row.lab_test
+            },
+            callback: function (res) {
+
+                if (!res.message) return;
+
+                const test = res.message;
+
+                const child = frm.add_child("lines");
+                child.test = test.service || test.name;
+                child.turnaround_time = test.turnaround_time || "";
+                child.sale_price = test.price || 0;
+                child.special_instruction = test.special_instruction || "";
+
+                frm.refresh_field("lines");
+            }
+        });
+    });
+}
